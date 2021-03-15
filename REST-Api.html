@@ -1,0 +1,421 @@
+
+<h1>RESTapi representational state transfer</h1>
+
+	<p>A REST API (also known as RESTful API) is an application programming interface (API or web API) 
+	that conforms to the constraints of REST architectural style and allows for interaction with 
+	RESTful web services. REST stands for representational state transfer and was created by 
+	computer scientist Roy Fielding.
+
+	A RESTful API is an architectural style for an application program interface (API) that uses 
+	HTTP requests to access and use data. That data can be used to GET, PUT, POST and DELETE data types, 
+	which refers to the reading, updating, creating and deleting of operations concerning resources.<p>
+
+<h2>Guiding Principles of REST</h2>
+
+	<p><b>Client–server</b> By separating the user interface concerns from the data storage concerns, we improve 
+	the portability of the user interface across multiple platforms and improve scalability by simplifying 
+	the server components.</p>
+
+	<p><b>Stateless</b>  Each request from client to server must contain all of the information necessary to 
+	understand the request, and cannot take advantage of any stored context on the server. Session 
+	state is therefore kept entirely on the client.</p>
+	
+	<p><b>Cacheable</b>  Cache constraints require that the data within a response to a request be implicitly or 
+	explicitly labeled as cacheable or non-cacheable. If a response is cacheable, then a client cache is 
+	given the right to reuse that response data for later, equivalent requests.</p>
+
+	<p><b>Uniform interface </b> By applying the software engineering principle of generality to the component 
+	interface, the overall system architecture is simplified and the visibility of interactions is improved. 
+	In order to obtain a uniform interface, multiple architectural constraints are needed to guide the 
+	behavior of components. REST is defined by four interface constraints: identification of resources; 
+	manipulation of resources through representations; self-descriptive messages; and, hypermedia as the 
+	engine of application state.</p>
+	
+	<p><b>Layered system </b> The layered system style allows an architecture to be composed of hierarchical layers 
+	by constraining component behavior such that each component cannot “see” beyond the immediate layer with 
+	which they are interacting.</p>
+
+	<p><b>Code on demand (optional)</b>  REST allows client functionality to be extended by downloading and executing 
+	code in the form of applets or scripts. This simplifies clients by reducing the number of features 
+	required to be pre-implemented.</p>
+
+<p>HTTP is unsecured while HTTPS is secured. HTTP sends data over port 80 while HTTPS uses port 443. HTTP operates at application layer, while HTTPS operates at transport layer. ... No encryption in HTTP, with HTTPS the data is encrypted before sending.</p>
+<h2>HTTP Verbs</h2>
+
+	<p>These are some conventions HTTP apis follow. These are actually not part of Rest specification. But we 
+	need to understand these to fully utilize Rest API.</p>
+
+
+	<p>HTTP defines a set of request methods to indicate the desired action to be performed for a given 
+	resource. Although they can also be nouns, these request methods are sometimes referred as HTTP verbs. </p>
+
+<p>	Each of them implements a different semantic, but some common features are shared by a group of them</p>
+
+<ul>
+
+<li>GET The GET method requests a representation of the specified resource. Requests using GETshould only retrieve 
+	data.</li>
+
+<li>HEAD The HEAD method asks for a response identical to that of a GET request, but without the response body.</li>
+
+
+<li>POST The POST method is used to submit an entity to the specified resource, often causing a change in state or 
+	side effects on the server.</li>
+
+<li>PUT The PUT method replaces all current representations of the target resource with the request payload.</li>
+
+
+<li>DELETE The DELETE method deletes the specified resource.</li>
+
+
+<li>CONNECT The CONNECT method establishes a tunnel to the server identified by the target resource.</li>
+
+
+<li>OPTIONS The OPTIONS method is used to describe the communication options for the target resource.</li>
+
+
+<li>TRACE The TRACE method performs a message loop-back test along the path to the target resource.</li>
+
+
+<li>PATCH The PATCH method is used to apply partial modifications to a resource.</li>
+</ul>
+
+
+
+<h3>Terminologies</h3>
+<p>
+The following are the most important terms related to REST APIs
+
+	Resource is an object or representation of something, which has some associated data with it and there 
+	can be set of methods to operate on it. E.g. Animals, schools and employees are resources and delete, 
+	add, update are the operations to be performed on these resources.
+
+	Collections are set of resources, e.g Companies is the collection of Company resource.</p>
+	<p><b>
+	URL (Uniform Resource Locator) is a path through which a resource can be located and some actions can be 
+	performed on it.</b></p>
+
+
+<h3>API Endpoint</h3>
+
+<p> This is what a API endpoint looks like.</p>
+
+<p>https://www.github.com/golang/go/search?q=http&type=Commits</p>
+
+<p>This URL can be broken into these parts</p>
+
+<p><b>	protocol	--	subdomain	--	domain		--		path						--		Port		--		query </b></p>
+
+<p>	http/https		--	subdomain	--	base-url	--	resource/some-other-resource	--		some-port	--		key value pair </p>
+
+<p>	https			--		www		--	github.com	--	golang/go/search				--			80		--		?q=http&type=Commits <p>
+
+<p><b>Protocol</b>
+	How the browser or client should communicate with the server.
+</p>
+<h3>Protocols</h3>
+<ul>
+<li>HTTP</li>
+<li>TLS</li>
+<li>FTP</li>
+<li>Telnet</li>
+<li>SMTP</li>
+<li>DNS</li>
+<li>TCP</li>
+<li>UDP</li>
+<li>IP</li>
+<li>ICMP</li>
+<li>IGMP</li>
+<li>Ethernet</li>
+<li>Tocken Ring</li>
+<li>Wireless LAN</li>
+</ul>
+
+
+
+<p><b>Subdomain</b>
+	Sub Division of the main domain
+</p>
+
+<p><b>Domain</b>
+		Unique reference to identify web site on the internet
+</p>
+
+<p><b>Port</b>
+	Port on the server the application is running on. By default its 80. So most cases we don't see it
+</p>
+
+<p><b>Path</b>
+		Path parameters in a Rest API represents resources.
+	</p>
+
+<p><b>Headers</b>
+	This was not part of the URL itself but header is a part of network component sent by the client or the 
+	server. Based on who sends it. 
+</p>
+<p>There are two kinds of header
+<ol>
+	<li>Request	 Header (client -> server)</li>
+	<li>Response Header (server -> client)</li>
+</ol>
+</p>
+
+<p><b>Body</b>
+	You can add extra information to both the request to the server and to the response from the server.</p>
+
+<p><b>Response Type</b>
+<ul>
+<li><b>Usually JSON or XML.</b></li>
+<li><b>Now a days it's mostly JSON.</b></li>
+</ul>
+</p>
+
+
+<h3>Rest API with GO</h3>
+
+<p>If you are writing Rest API why should you choose go?</p>
+<ul>
+	<li>It's compiled. So you get small binaries.</li>
+	<li>It's fast. (slower than c/c++ or rust) but faster than most other web programming languages.</li>
+	<li>It's simple to understand.</li>
+	<li>It works really well in the microservices world for reason no 1.</li>
+</ul>
+
+<h3>net/http</h3>
+	
+<p>Package http provides HTTP client and server implementations.</p>
+<p>The standard library in go comes with the net/http package, which is an excellent starting point for 
+	building RestAPIs. And most other libraries the adds some additional feature are also interoperable 
+	with the net/http package so understanding the net/http package is crucial to using golang for RestAPIs.</p>
+
+
+<p><b>The Handler Interface</b><p>
+<p> We need to memorize the Handler interface.</p>
+
+<p>	type Handler interface {</p>
+<p>	        ServeHTTP(ResponseWriter, *Request)</p>
+</p>		}</p>
+
+<p>	And here it is.</p>
+
+<p>	It has one method and one method only.</p>
+
+<p>	A struct or object will be Handler if it has one method ServeHTTP which takes ResponseWriter and pointer 
+	to Request.</p>
+
+
+<hr/>
+
+<p><b>Simple Rest API</b></p>
+
+<p>So let's jump right into it.</p>
+
+<p>	In a folder where you want to write your go code</p>
+	
+<p>	<b>[ go mod init api-test ]</b></p>
+
+
+
+<p>Create a new file, you can name it whatever you want.
+
+<p>I am calling mine main.go</p>
+
+<p>package main</p>
+<p>import (</p>
+<p>    "log"</p>
+<p>    "net/http"</p>
+<p>	)</p>
+<p>	type server struct{}</p>
+<p>	func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {</p>
+<p>    w.Header().Set("Content-Type", "application/json")</p>
+<p>	        w.WriteHeader(http.StatusOK)</p>
+<p>	    w.Write([]byte(`{"message": "hello world"}`))</p>
+<p>	}</p>
+<p>	func main() {</p>
+<p>	    s := &server{}</p>
+<p>	    http.Handle("/", s)</p>
+<p>    log.Fatal(http.ListenAndServe(":8080", nil))</p>
+<p>	}</p>
+
+
+<p><b>Lets break down this code.</b></p>
+
+<p>At the top we have our package main all go executable need a main package.</p>
+
+<p>	We have our imports. log for logging some error if it happens. net/http because we are writing a rest api.</p>
+
+</p>Then we have a struct called server. It has no fields. We will add a method to this server ServeHTTP and 
+	that will satisfy the Handler interface. One thing you will notice in go we don't have to explicitly say 
+	the interface we are implementing. The compiler is smart enough to figure that out. In the ServeHTTP 
+	method we set httpStatus 200 to denote its the request was a success. We se the content type to 
+	application/json so the client understands when we send back json as payload. Finally we write.</p>
+
+<p>{"message": "hello world"}</p>
+
+<p><b>To the response.</b></p>
+
+
+
+
+<p>We will modify our ServeHTTP method with the following.</p>
+
+	func (s *server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	    w.Header().Set("Content-Type", "application/json")
+	    switch r.Method {
+	    case "GET":
+	        w.WriteHeader(http.StatusOK)
+	        w.Write([]byte(`{"message": "get called"}`))
+	    case "POST":
+	        w.WriteHeader(http.StatusCreated)
+	        w.Write([]byte(`{"message": "post called"}`))
+	    case "PUT":
+	        w.WriteHeader(http.StatusAccepted)
+	        w.Write([]byte(`{"message": "put called"}`))
+	    case "DELETE":
+	        w.WriteHeader(http.StatusOK)
+	        w.Write([]byte(`{"message": "delete called"}`))
+	    default:
+	        w.WriteHeader(http.StatusNotFound)
+	        w.Write([]byte(`{"message": "not found"}`))
+	    }
+	}
+
+
+<p>We can clean up our code a little bit with this</p>
+
+<p>	package main</p>
+
+	<p>	import (</p>
+		<p>	    "log"</p>
+		<p>	    "net/http"</p>
+		<p>	)</p>
+
+	<p>	func home(w http.ResponseWriter, r *http.Request) {</p>
+		<p>	    w.Header().Set("Content-Type", "application/json")</p>
+		<p>	    switch r.Method {</p>
+			<p>	    case "GET":</p>
+		<p>	        w.WriteHeader(http.StatusOK)</p>
+			<p>	        w.Write([]byte(`{"message": "get called"}`))</p>
+			<p>    case "POST":</p>
+		<p>        w.WriteHeader(http.StatusCreated)</p>
+			<p>       w.Write([]byte(`{"message": "post called"}`))</p>
+			<p>    case "PUT":</p>
+		<p>        w.WriteHeader(http.StatusAccepted)</p>
+			<p>        w.Write([]byte(`{"message": "put called"}`))</p>
+			<p>    case "DELETE":</p>
+		<p>        w.WriteHeader(http.StatusOK)</p>
+			<p>        w.Write([]byte(`{"message": "delete called"}`))</p>
+			<p>    default:</p>
+		<p>        w.WriteHeader(http.StatusNotFound)</p>
+			<p>        w.Write([]byte(`{"message": "not found"}`))</p>
+			<p>	    }</p>
+		<p>	}</p>
+
+	<p>	func main() {</p>
+		<p>	    http.HandleFunc("/", home)</p>
+	    <p>log.Fatal(http.ListenAndServe(":8080", nil))</p>
+		<p>	}</p>
+
+<hr/>
+
+
+<h3>Gorilla Mux</h3>
+
+<p>	Package gorilla/mux implements a request router and dispatcher for matching incoming requests to their 
+	respective handler. The name mux stands for “HTTP request multiplexer”. ... Router matches incoming 
+	requests against a list of registered routes and calls a handler for the route that matches the 
+	URL or other conditions.</p>
+	
+
+<p>To install a module we can use go get</p>
+
+<p><b>	[ go get github.com/gorilla/mux ]</b></p>
+
+
+<p>We change our code to this</p>
+
+<p><b>	package main</p>
+<p>	import (</p>
+<p>	    "log"</p>
+<p>	    "net/http"</p>
+<p>	    "github.com/gorilla/mux"</p>
+<p>	)</p>
+<p>	func home(w http.ResponseWriter, r *http.Request) {</p>
+<p>   w.Header().Set("Content-Type", "application/json")</p>
+<p>   switch r.Method {</p>
+<p>    case "GET":</p>
+<p>	        w.WriteHeader(http.StatusOK)</p>
+<p>	        w.Write([]byte(`{"message": "get called"}`))</p>
+<p>	    case "POST":</p>
+<p>	        w.WriteHeader(http.StatusCreated)</p>
+<p>	        w.Write([]byte(`{"message": "post called"}`))</p>
+<p>	    case "PUT":</p>
+<p>	        w.WriteHeader(http.StatusAccepted)</p>
+<p>	        w.Write([]byte(`{"message": "put called"}`))</p>
+<p>	    case "DELETE":</p>
+<p>	        w.WriteHeader(http.StatusOK)</p>
+<p>	        w.Write([]byte(`{"message": "delete called"}`))</p>
+<p>	    default:</p>
+<p>	        w.WriteHeader(http.StatusNotFound)</p>
+<p>	        w.Write([]byte(`{"message": "not found"}`))</p>
+<p>	    }</p>
+<p>	}</p>
+<p>	func main() {</p>
+<p>	    r := mux.NewRouter()</p>
+<p>	    r.HandleFunc("/", home)</p>
+<p>	    log.Fatal(http.ListenAndServe(":8080", r))</p>
+<p>	}</b></p>
+
+<hr/>
+
+<h3>HandleFunc HTTP Methods</h3>
+
+<p>	But now we can do a little bit more with our HandleFunc Like making each function handle a specific 
+	HTTP Method.</p>
+
+<p>	It looks something like this</p>
+
+
+<p><b>package main</b></p>
+
+<p><b>	import (</b></p>
+<p><b>	"log"</b></p>
+<p><b>	"net/http"</b></p>
+<p><b>	"github.com/gorilla/mux"</b></p>
+<p><b>	)</b></p>
+<p><b>	func get(w http.ResponseWriter, r *http.Request) {</b></p>
+<p><b>	    w.Header().Set("Content-Type", "application/json")</b></p>
+<p><b>	    w.WriteHeader(http.StatusOK)</b></p>
+<p><b>	    w.Write([]byte(`{"message": "get called"}`))</b></p>
+<p><b>	}</b></p>
+<p><b>	func post(w http.ResponseWriter, r *http.Request) {</b></p>
+<p><b>	    w.Header().Set("Content-Type", "application/json")</b></p>
+<p><b>	    w.WriteHeader(http.StatusCreated)</b></p>
+<p><b>	    w.Write([]byte(`{"message": "post called"}`))</b></p>
+<p><b>	}</b></p>
+<p><b>	func put(w http.ResponseWriter, r *http.Request) {</b></p>
+<p><b>	    w.Header().Set("Content-Type", "application/json")</b></p>
+<p><b>    w.WriteHeader(http.StatusAccepted)</b></p>
+<p><b>	    w.Write([]byte(`{"message": "put called"}`))</b></p>
+<p><b>	}</b></p>
+<p><b></b>func delete(w http.ResponseWriter, r *http.Request) {</p></p>
+<p><b>    w.Header().Set("Content-Type", "application/json")</b></p>
+<p><b>    w.WriteHeader(http.StatusOK)</b></p>
+<p><b>	    w.Write([]byte(`{"message": "delete called"}`))</b></p>
+<p><b>	}</b></p>
+<p><b>	func notFound(w http.ResponseWriter, r *http.Request) {</b></p>
+<p><b>	    w.Header().Set("Content-Type", "application/json")</b></p>
+<p><b>	    w.WriteHeader(http.StatusNotFound)</b></p>
+<p><b>	    w.Write([]byte(`{"message": "not found"}`))</b></p>
+<p><b>	}</b></p>
+<p><b>	func main() {</b></p>
+<p><b>	    r := mux.NewRouter()</b></p>
+<p><b>	    r.HandleFunc("/", get).Methods(http.MethodGet)</b></p>
+<p><b>	    r.HandleFunc("/", post).Methods(http.MethodPost)</b></p>
+<p><b>	    r.HandleFunc("/", put).Methods(http.MethodPut)</b></p>
+<p><b>	    r.HandleFunc("/", delete).Methods(http.MethodDelete)</b></p>
+<p><b>	    r.HandleFunc("/", notFound)</b></p>
+<p><b>	    log.Fatal(http.ListenAndServe(":8080", r))</b></p>
+<p><b>	}</b></p>
+
+

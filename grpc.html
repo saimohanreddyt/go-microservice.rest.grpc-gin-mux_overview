@@ -1,0 +1,33 @@
+<h2>gRPC</h2>
+<p><ul>
+<li> gRPC is a high-performance open-source feature-rich RPC framework</li>
+
+<li> gRPC is originally developed by Google</li>
+
+<li> Now it is a part of the Cloud Native Computing Foundation - CNCF</li>
+
+<li> g stands for different things in each gRPC release: gRPC, goog, glorious, game, gon</li>
+  
+<li> RPC stands for Remote Procedure Calls<li>
+</ul></p>
+
+<h3>Remote Procedure Calls</h3>
+
+
+ <p> It is a protocol that allows a program to </p>
+	<ul>
+	<li> execute a procedure of another program located in other computer</li>
+	<li> without the developer explicitly coding the details for the remote interaction</li>
+	</ul>
+
+ <p> In the client code, it looks like we're just calling a function of the server code directly
+
+ <p> The client and server codes can be written in different languages
+ 
+<p><b> How gRPC works?</b></p>
+
+ <p> Client has a generated stub that provides the same methods as the server</p>
+
+ <p> The stub calls gRPC framework under the hood to exchange information over network</p>
+
+ <p> Client and server use stubs to interact with each other, so they only need to implement their core service logic</p>

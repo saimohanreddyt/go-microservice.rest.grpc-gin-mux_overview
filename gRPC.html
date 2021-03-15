@@ -1,0 +1,182 @@
+<h2>gRPC</h2>
+
+<p>gRPC (gRPC Remote Procedure Calls) is an open source remote procedure call (RPC) system initially developed at Google in 2015.</p>
+<img src= "https://grpc.io/img/landing-2.svg"/>
+<h3>Is gRPC faster than rest?</h3>
+<p>“gRPC is roughly 7 times faster than REST when receiving data & roughly 10 times faster than REST when sending data for this specific payload.</p>
+
+<h3>Deadline</h3>
+<p>A deadline allows a gRPC client to specify how long it will wait for a call to complete. When a deadline is exceeded, the call is canceled. Setting a deadline is important because it provides an upper limit on how long a call can run for.</p>
+
+<h3>Methods</h3>
+<p>A gRPC service can have different types of methods.</p>
+<p>The gRPC method types are:</p>
+<ul>    
+    <li>Unary.</li>
+    <li>Server streaming.</li>
+    <li>Client streaming.</li>
+    <li>Bi-directional streaming.</li>
+</ul>
+
+<h3>Compatibility</h3>
+<p>Backwards compatibility. The gRPC protocol is designed to support services that change over time. Generally, additions to gRPC services and methods are non-breaking. ... When gRPC services have breaking changes, clients using that service have to be updated and redeployed.</p>
+
+<h3>What is a gRPC service?</h3>
+<p>gRPC is a high performance, open-source universal RPC framework, developed by Google. In gRPC, a client application can directly call methods on a server application on a different machine as if it was a local object, making it easier to create distributed applications and services.
+
+<h3>Is gRPC a TCP or UDP?</h3>
+<p>gRPC uses HTTP/2, which multiplexes multiple calls on a single TCP connection. All gRPC calls over that connection go to one endpoint.
+
+<h3>Is gRPC faster than HTTP?</h3>
+<p>gRPC is not faster than REST over HTTP/2 by default, but it gives you the tools to make it faster. There are some things that would be difficult or impossible to do with REST. Selective message compression. In gRPC a streaming RPC can decide to compress or not compress messages
+
+<h3>Does Google use gRPC?</h3>
+<p>gRPC is being used for communication in internal production, on Google Cloud Platform, and in public-facing APIs.
+
+<h3>Is gRPC based on HTTP?</h3>
+<p>gRPC is an open-source RPC framework that is created and used by Google. It is built upon HTTP/2.0 which makes bi-directional communication possible. gRPC communicates using binary data using protocol buffers by default for serializing structured data. gRPC servers allow cross-language unary calls or stream calls.
+
+<h3>Does gRPC use Protobuf?</h3>
+<p>Overview - gRPC. ... gRPC uses protocol buffers by default as the definition language and message format, but you can swap it out to use something else if you like (such as JSON). Just like when creating a custom REST API, you are left to create the server & client implementations, you do the same with gRPC.
+
+<h3>Does gRPC require http 2?</h3>
+<p>gRPC uses HTTP/2 as its transfer protocol, so it inherits some great features that HTTP/2 offers, such as binary framing, which is high performance and robust, lighter to transport and safer to decode compared to other text-based protocols. And because it's binary, it's a great combination with protocol buffer.
+
+<h3>What is gRPC good for?</h3>
+<p>gRPC is a modern, open source remote procedure call (RPC) framework that can run anywhere. It enables client and server applications to communicate transparently, and makes it easier to build connected systems. Read the longer Motivation & Design Principles post for background on why we created gRPC.
+
+<h3>Is Protobuf faster than JSON?</h3>
+<p>Google made this protocol open source and now it provides support, out of the box, to the most common languages, like JavaScript, Java, C#, Ruby and others. In our tests, it was demonstrated that this protocol performed up to 6 times faster than JSON. "Protobuf performs up to 6 times faster than JSON."
+
+<h3>Pain Points of gRPC</h3>
+<p>When the microservices is only internal and when one server needs to talk to the other. When your internal services requires duplex streaming with high load of data. When you don't feel to write client libraries.
+
+<h3>Is gRPC an API?</h3>
+<p>gRPC is a technology for implementing RPC APIs that uses HTTP 2.0 as its underlying transport protocol. ... These APIs adopt an entity-oriented model, as does HTTP, but are defined and implemented using gRPC, and the resulting APIs can be invoked using standard HTTP technologies.
+
+<h3>Is gRPC secure?</h3>
+<p>When you're using gRPC over a TLS-encrypted HTTP/2 connection, all traffic between clients and servers is encrypted, even if you don't use channel-level authentication. This chapter will show how to apply call credentials and channel credentials to a gRPC service.
+
+<h3>Who uses gRPC?</h3>
+<p>Who uses gRPC? 152 companies reportedly use gRPC in their tech stacks, including Slack, medium.com, and Alibaba Travels.
+
+<h3>Is gRPC a Web service?</h3>
+<p>gRPC-Web, just like gRPC, lets you define the service “contract” between client (web) and backend gRPC services using Protocol Buffers. The client can then be auto generated. To do this, you have a choice between the Closure compiler or the more widely used CommonJS.
+
+<h3>Is gRPC asynchronous?</h3>
+<p>Overview. gRPC uses the CompletionQueue API for asynchronous operations.
+
+<h3>How does gRPC communicate?</h3>
+<p>gRPC is open source, meaning the source code is publicly accessible. Third parties are permitted and encouraged to make changes and enhancements to the code. By default, gRPC uses HTTP/2 for transporting data streams between remote computers. Protocol buffers developed by Google are used for processing the data.
+
+<h3>Does gRPC use JSON?</h3>
+<p>While this post only covered JSON, gRPC is compatible with Thrift, Avro, Flatbuffers, Cap'n Proto, and even raw bytes! gRPC lets you be in control of how your data is handled.
+
+<h3>Does gRPC use UDP?</h3>
+<p>Sorry, UDP support in gRPC is not enabled. As you observed, there is no way to actually access the limited udp support that currently exists. ... We are working on new interface/abstractions between the grpc & transport packages to make it possible for custom transports (UDP could be one of them) to be implemented.
+
+<h3>Does gRPC use TLS?</h3>
+<p>SSL/TLS: gRPC has SSL/TLS integration and promotes the use of SSL/TLS to authenticate the server, and to encrypt all the data exchanged between the client and the server. Optional mechanisms are available for clients to provide certificates for mutual authentication.
+
+<h3>Why did Google create gRPC?</h3>
+<p>Both CORBA and gRPC are designed to make the clients believe that the server is on the same machine. Clients invoke a method on the Stub, which gets transparently handled by the underlying protocol.
+
+<h3>What is RPC used for?</h3>
+<p>Remote Procedure Call (RPC) is a protocol that one program can use to request a service from a program located in another computer on a network without having to understand the network's details. RPC is used to call other processes on the remote systems like a local system.
+
+<h3>Starting the server</h3>
+<p>
+    1.Specify the port we want to use to listen for client requests using: ...
+    2.Create an instance of the gRPC server using grpc. ...
+    3.Register our service implementation with the gRPC server.
+    4.Call Serve() on the server with our port details to do a blocking wait until the process is killed or Stop() is called.
+
+<h3>What is RPC and how it works?</h3>
+<p>RPC is a request–response protocol. An RPC is initiated by the client, which sends a request message to a known remote server to execute a specified procedure with supplied parameters. The remote server sends a response to the client, and the application continues its process.
+
+<h3>How do I know what version of gRPC I have?</h3>
+<p>If you installed already, make sure the protobuf version is compatible with the grpc version you installed. If you build grpc.so from source, you can check the version of grpc inside package. xml file.
+
+<h3>What port does gRPC use?</h3>
+<p>Envoy forwards the request to the backend gRPC server listening on port :9090 .
+
+<h3>Does gRPC use Websockets?</h3>
+<p>gRPC is an API/Protocol on top of HTTP/2, so it is more relevant to compare HTTP/2 and Websockets. ... This need to be handled by application developer or a library when using Websocket - if desired. If your client is a browser, the answer to HTTP/2 or Websockets for low latency client to server messages may be relevant.
+
+<h3>Why is Protobuf faster?</h3>
+<p>In protobuf, the payload is smaller, plus the math is simple, and the member-lookup is an integer (so: suitable for a very fast switch /jump).
+
+<h3>How does Protobuf serialize?</h3>
+<p>The Protobuf serialization mechanism is given through the protoc application, this compiler will parse the . proto file and will generate as output, source files according to the configured language by its arguments, in this case, C++. ... For example, we can serialize to a string by the SerializeAsString method.
+
+<h3>What are Protobuf messages?</h3>
+<p>Website. developers.google.com/protocol-buffers/ Protocol Buffers (Protobuf) is a method of serializing structured data. It is useful in developing programs to communicate with each other over a network or for storing data.
+
+<h3>Is Protobuf compressed?</h3>
+<p>No it does not; there is no "compression" as such specified in the protobuf spec; however, it does (by default) use "varint encoding" - a variable-length encoding for integer data that means small values use less space; so 0-127 take 1 byte plus the header.
+
+<h3>How does Google Protobuf work?</h3>
+<p>Protobuf is a data serializing protocol like a JSON or XML. ... You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages.
+
+<h3>What is gRPC Protobuf?</h3>
+<p>Protobuf is the most commonly used IDL (Interface Definition Language) for gRPC. It's where you basically store your data and function contracts in the form of a proto file.
+
+<h3>What is protocol buffer in Tensorflow?</h3>
+<p>Protocol buffers are just like any other structure notation such as JSON, XML, HTML. Protobuf is a preferred choice because they are very compact, and are strongly typed. Tensorflow graphs use the protobuf GraphDef to define a graph. This GraphDef protobuf can be exported and imported.
+
+<h3>What is protocol buffer in Tensorflow?</h3>
+<p>Protocol buffers are just like any other structure notation such as JSON, XML, HTML. Protobuf is a preferred choice because they are very compact, and are strongly typed. Tensorflow graphs use the protobuf GraphDef to define a graph. This GraphDef protobuf can be exported and imported.
+
+<h3>What is swagger API?</h3>
+<p>Swagger allows you to describe the structure of your APIs so that machines can read them. The ability of APIs to describe their own structure is the root of all awesomeness in Swagger.
+
+<h3>How does gRPC Web work?</h3>
+<p>What is gRPC-Web? While similarly named, gRPC-Web is a distinctly different protocol. It exists solely in a browser and acts as a translation layer between gRPC and your application in a browser. The “web” client in gRPC-Web receives requests over HTTP 1.1 or HTTP/2 and then sends the requests through a proxy.
+
+<h3>Is gRPC a binary?</h3>
+<p>gRPC messages are serialized using Protobuf, an efficient binary message format. ... gRPC is designed for HTTP/2, a major revision of HTTP that provides significant performance benefits over HTTP 1.
+
+<h3>Is gRPC bidirectional?</h3>
+<p>Bidirectional streaming RPC
+Client- and server-side stream processing is application specific. Since the two streams are independent, the client and server can read and write messages in any order.
+
+<h3>What is a RPC framework?</h3>
+<p>An RPC framework in general is a set of tools that enable the programmer to call a piece of code in a remote process, be it on a different machine or just another process on the same machine. ... This service may be called by a client program written in Python, running on a Windows machine.
+
+<h3>What is a stub gRPC?</h3>
+<p>A module acting as the interface for gRPC client. You can do everything in the client side via GRPC. Stub , including connecting, sending/receiving steaming or non-steaming requests, canceling calls and so on. If request is streaming, the RPC function only accepts channel as argument and returns a GRPC. ...
+
+<h3>How do I set up gRPC?</h3>
+<p>Quick start
+    gRPC. Install gRPC: ...
+    gRPC tools. Python's gRPC tools include the protocol buffer compiler protoc and the special plugin for generating server and client code from . ...
+    Update the server. In the same directory, open greeter_server.py . ...
+    Update the client. In the same directory, open greeter_client.py . ...
+    Run!
+
+<h3>Is Protobuf human readable?</h3>
+<p>If you're using the protobuf package, the print function/statement will give you a human-readable representation of the message, because of the __str__ method :-).
+
+<h3>How do I update protoc?</h3>
+<p>Probably you want to do sudo chown root:root /usr/local/bin/protoc . UPDATE: Same applies to /usr/local/include/google/protobuf/* if you are using gRPC. If you are updating protoc compiler, then you should update those proto files as well.
+
+<h3>What does serializing data mean?</h3>
+<p>In computing, serialization (US spelling) or serialisation (UK spelling) is the process of translating a data structure or object state into a format that can be stored (for example, in a file or memory data buffer) or transmitted (for example, across a computer network) and reconstructed later (possibly in a different ...</p>
+
+<h3>What is protoc GEN go?</h3>
+<p>protoc-gen-go is a plugin for the Google protocol buffer compiler to generate Go code.</p>
+
+<h3>What is .proto file?</h3>
+<p>Developer file created in Google's Protocol Buffer format, a data serialization format used for exchanging data; specifies one or more "messages" as logical records, each of which contains name-value pairs (e.g., a Person message may have an ID, name, and address); designed as an alternative to XML for data exchange.</p>
+
+<h3>What is Protobuf format?</h3>
+<p>Protocol Buffers is a high-performance, compact binary wire format invented by Google who use it internally so they can communicate with their internal network services at very high speed.</p>
+
+<h3>Is gRPC secure?</h3>
+<p>When you're using gRPC over a TLS-encrypted HTTP/2 connection, all traffic between clients and servers is encrypted, even if you don't use channel-level authentication. This chapter will show how to apply call credentials and channel credentials to a gRPC service.</p>
+
+<h3>Does gRPC require TLS?</h3>
+<p>The following authentication mechanisms are built-in to gRPC: SSL/TLS: gRPC has SSL/TLS integration and promotes the use of SSL/TLS to authenticate the server, and to encrypt all the data exchanged between the client and the server.</p>
+
+
+

@@ -1,0 +1,69 @@
+<h2>TCP/IP model</h2>
+
+<ul>
+    <li>The TCP/IP model was developed prior to the OSI model.</li>
+    <li>The TCP/IP model is not exactly similar to the OSI model.</li>
+    <li>The TCP/IP model consists of five layers:
+        <ol> <li>the application layer,</li>
+            <li> transport layer,</li>
+            <li> network layer,</li>
+            <li> data link layer and </li>
+            <li>physical layer.
+        </ol></li>
+    <li>The first four layers provide physical standards, network interface, internetworking, and transport functions that correspond to the first four layers of the OSI model and these four layers are represented in TCP/IP model by a single layer called the application layer.</li>
+    <li>TCP/IP is a hierarchical protocol made up of interactive modules, and each of them provides specific functionality.</li>    
+</ul>
+
+<p>Here, hierarchical means that each upper-layer protocol is supported by two or more lower-level protocols.</p>
+
+<h3>Functions of TCP/IP layers:</h3>
+<p><img src="https://static.javatpoint.com/tutorial/computer-network/images/tcp-ip-model.png"/></p>
+<p></p>
+<h3>Network Access Layer</h3>
+<ul>
+    <li>A network layer is the combination of the Physical layer and Data Link layer defined in the OSI reference model.</li>
+    <li>It defines how the data should be sent physically through the network.</li>
+    <li>This layer is mainly responsible for the transmission of the data between two devices on the same network.</li>
+    <li>The functions carried out by this layer are encapsulating the IP datagram into frames transmitted by the network and mapping of IP addresses into physical addresses.</li>
+</ul>
+
+<h3>Transport Layer</h3>
+<p>The transport layer is responsible for the reliability, flow control, and correction of data which is being sent over the network.</p>
+<p>The two protocols used in the transport layer are User Datagram protocol and Transmission control protocol.</p>
+
+<ul>
+    <li><h3>User Datagram Protocol (UDP)</h3></li>
+    <ul>
+    <li>It provides connectionless service and end-to-end delivery of transmission.</li>
+    <li>It is an unreliable protocol as it discovers the errors but not specify the error.</li>
+    <li>User Datagram Protocol discovers the error, and ICMP protocol reports the error to the sender that user datagram has been damaged.</li>
+    </ul>
+    <li><h3>Transmission Control Protocol (TCP)</h3></li>
+    <ul>
+    <li>It provides a full transport layer services to applications.</li>
+    <li>It creates a virtual circuit between the sender and receiver, and it is active for the duration of the transmission.</li>
+    <li>TCP is a reliable protocol as it detects the error and retransmits the damaged frames. Therefore, it ensures all the segments must be received and acknowledged before the transmission is considered to be completed and a virtual circuit is discarded.</li>
+    <li>At the sending end, TCP divides the whole message into smaller units known as segment, and each segment contains a sequence number which is required for reordering the frames to form an original message.</li>
+    <li>At the receiving end, TCP collects all the segments and reorders them based on sequence numbers.</li>
+    
+    </ul>
+</ul>
+
+<h3>Application Layer</h3>
+<ul>
+    <li>An application layer is the topmost layer in the TCP/IP model.</li>
+    <li>It is responsible for handling high-level protocols, issues of representation.</li>
+    <li>This layer allows the user to interact with the application.</li>
+    <li>When one application layer protocol wants to communicate with another application layer, it forwards its data to the transport layer.</li>
+    <li>There is an ambiguity occurs in the application layer. Every application cannot be placed inside the application layer except those who interact with the communication system. For example: text editor cannot be considered in application layer while web browser using HTTP protocol to interact with the network where HTTP protocol is an application layer protocol.</li>
+</ul>
+<p>Following are the main protocols used in the application layer:</p>
+
+<ul>
+    <li><b>HTTP:</b> HTTP stands for Hypertext transfer protocol. This protocol allows us to access the data over the world wide web. It transfers the data in the form of plain text, audio, video. It is known as a Hypertext transfer protocol as it has the efficiency to use in a hypertext environment where there are rapid jumps from one document to another.</li>
+    <li><b>SNMP: </b>SNMP stands for Simple Network Management Protocol. It is a framework used for managing the devices on the internet by using the TCP/IP protocol suite.</li>
+    <li><b>SMTP: </b>SMTP stands for Simple mail transfer protocol. The TCP/IP protocol that supports the e-mail is known as a Simple mail transfer protocol. This protocol is used to send the data to another e-mail address.</li>
+    <li><b>DNS: </b>DNS stands for Domain Name System. An IP address is used to identify the connection of a host to the internet uniquely. But, people prefer to use the names instead of addresses. Therefore, the system that maps the name to the address is known as Domain Name System.</li>
+    <li><b>TELNET: </b>It is an abbreviation for Terminal Network. It establishes the connection between the local computer and remote computer in such a way that the local terminal appears to be a terminal at the remote system.</li>
+    <li><b>FTP: </b>FTP stands for File Transfer Protocol. FTP is a standard internet protocol used for transmitting the files from one computer to another computer.</li>
+</ul>

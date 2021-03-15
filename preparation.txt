@@ -1,0 +1,292 @@
+
+HTML
+-x-x-
+Hypertext Markup Language is the standard markup language for 
+documents designed to be displayed in a web browser. It can be 
+assisted by technologies such as Cascading Style Sheets and 
+scripting languages such as JavaScript.
+
+
+CSS
+-x-x-
+Cascading Style Sheets is a style sheet language used for describing 
+the presentation of a document written in a markup language such as HTML. 
+CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript
+
+
+G0
+-x-x-
+Go is an open source programming language that makes 
+it easy to build simple, reliable, and efficient software.
+
+
+Go RestAPI
+-x-x-x-x-x-
+A REST API (also known as RESTful API) is an application programming interface (API or web API) 
+that conforms to the constraints of REST architectural style and allows for interaction 
+with RESTful web services. ... An API is a set of definitions and protocols for building and 
+integrating application software.
+
+
+Gin
+-x-
+Gin is a framework that reduces boilerplate code 
+that would normally go into building these applications. 
+Gin is a HTTP web framework written in Go (Golang). 
+It features a Martini-like API with much better 
+performance -- up to 40 times faster. If you need 
+smashing performance, get yourself some Gin. gin-gonic.com/ MIT License.
+
+
+Git
+-x-x-
+Git is a version control system that lets you manage and keep track of 
+your source code history. 
+	git init
+	git config --global user.name "- "
+	git congig --global user.email "-"
+	git add
+	git branch -M main
+	git remote add origin "link"
+	git push -u origin main
+	git status
+	git commit
+	git push
+	git pull
+	git clone
+	git log
+	git branch "-"
+	git checkout
+
+
+Github
+-x-x-x-
+GitHub is a cloud-based hosting service that lets you manage 
+Git repositories. If you have open-source projects that use Git, 
+then GitHub is designed to help you better manage them.
+
+
+Docker
+-x-x-x-
+Docker is a set of platform as a service products that 
+use OS-level virtualization to deliver software in 
+packages called containers. Containers are isolated 
+from one another and bundle their own software, 
+libraries and configuration files; they can 
+communicate with each other through well-defined channels.
+	docker pull "image_name"
+	docker run "image_name"
+	docker images
+	docker ps
+	docker build
+	docker stop "container_id"
+	docker start "container_id"
+	docker exec -it
+	docker log
+
+
+Is Docker a VM?
+-x-x-x-x-x-x-x-
+>Docker is container based technology and containers are just 
+	user space of the operating system. ... 
+
+>A Virtual Machine, on the other hand, is not based on container technology. 
+	They are made up of user space plus kernel space of an operating system. 
+	Under VMs, server hardware is virtualized
+
+
+docker image
+-x-x-x-x-x-x-
+A Docker image is a read-only template that contains a set of instructions 
+for creating a container that can run on the Docker platform. 
+It provides a convenient way to package up applications and 
+preconfigured server environments, which you can use for your 
+own private use or share publicly with other Docker users
+
+
+Kubernetes
+-x-x-x-x-x-
+Kubernetes is an open-source container-orchestration 
+system for automating computer application 
+deployment, scaling, and management. It was 
+originally designed by Google and is now maintained 
+by the Cloud Native Computing Foundation.
+	kubectl config view # Show Merged kubeconfig settings.
+	kubectl apply 
+	kubectl get # List all services in the namespace
+	kubectl describe # Describe commands with verbose output
+	kubectl diff # Compares the current state of the cluster against the state that the cluster would be in if the manifest was applied.
+	kubectl rollout
+	kubectl expose
+	kubectl label
+	kubectl annotate
+	kubectl autoscale 
+	kubectl patch 
+	kubectl edit
+	kubectl scale 
+	kubectl delete 
+	kubectl logs 
+	kubectl attach 
+	kubectl port
+	kubectl exec
+	kubectl cordon
+	kubectl drain
+	kubectl uncordon
+	kubectl cluster
+	kubectl api-resources
+	
+
+	
+Namespace
+-x-x-x-x-x-
+Namespaces. Docker uses a technology called namespaces to provide 
+the isolated workspace called the container. When you run a container, 
+Docker creates a set of namespaces for that container. 
+These namespaces provide a layer of isolation.
+
+
+minikube
+-x-x-x-x-
+minikube quickly sets up a local Kubernetes cluster on 
+macOS, Linux, and Windows. We proudly focus on helping 
+application developers and new Kubernetes users.
+
+	Start a cluster by running:
+	> $ minikube start
+
+	Access the Kubernetes Dashboard running within the minikube cluster:
+	> $ minikube dashboard
+
+	Once started, you can interact with your cluster using kubectl, just like any other Kubernetes cluster. For instance, starting a server:
+	> $ kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.4
+
+	Exposing a service as a NodePort
+	> $ kubectl expose deployment hello-minikube --type=NodePort --port=8080
+
+	minikube makes it easy to open this exposed endpoint in your browser:
+	> $ minikube service hello-minikube
+
+	Upgrade your cluster:
+	> $ minikube start --kubernetes-version=latest
+
+
+Orchestration
+-x-x-x-x-x-x-
+Orchestration is the automated configuration, management, 
+and coordination of computer systems, applications, and services. 
+Orchestration helps IT to more easily manage complex tasks and workflows. 
+IT teams must manage many servers and applications, 
+but doing so manually isn't a scalable strategy.
+
+
+Helm
+-x-x-
+Helm helps you manage Kubernetes applications.
+In simple terms, Helm is a package manager for Kubernetes. 
+Helm is the K8s equivalent of yum or apt. Helm deploys charts, 
+which you can think of as a packaged application. 
+It is a collection of all your versioned, pre-configured 
+application resources which can be deployed as one unit.
+
+
+cilium
+-x-x-x-
+Cilium is open source software for transparently securing 
+the network connectivity between application services deployed 
+using Linux container management platforms like Docker and Kubernetes.
+Cilium assigns a security identity to groups of application containers 
+which share identical security policies. The identity is then associated 
+with all network packets emitted by the application containers, 
+allowing to validate the identity at the receiving node. Security identity 
+management is performed using a key-value store.
+
+
+Berkeley Packet Filter
+-x-x-x-x-x-x-x-x-x-x-x-
+eBPF stands for Extended Berkeley Packet Filter. 
+The full version of the acronym doesn't do much justice to the actual abilities of the technology.
+
+Hubble
+-x-x-x-
+Hubble is a fully distributed networking and security observability 
+platform. It is built on top of Cilium and eBPF to enable deep visibility 
+into the communication and behavior of services as well as the 
+networking infrastructure in a completely transparent manner.
+
+
+Daemon
+-x-x-x-
+In multitasking computer operating systems, a daemon is a computer program 
+that runs as a background process, rather than being under the direct control of an interactive user.
+
+
+minikube
+-x-x-x-x-
+minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+
+
+
+
+Layers of OSI Model
+-x-x-x-x-x-x-x-x-x-
+>Application Layer
+>Presentation Layer
+>Session Layer
+>Transport Layer
+>Network Layer
+>Data Link Layer
+>Physical Layer
+
+
+Protocols
+-x-x-x-x-
+	HTTP
+	TLS
+	FTP
+	Telnet
+	SMTP
+	DNS
+	TCP
+	UDP
+	IP
+	ICMP
+	IGMP
+	Enthernet
+	Tocken Ring
+	Wireless LAN
+
+
+
+
+Linux/Ubuntu Commands
+-x-x-x-x-x-x-x-x-x-x-
+date         -Display the current time in the certain FORMAT, or set the system date.
+cal	     -Display the current date in the calender format
+uptime	     -show uptime in pretty format
+whoami       -Print the user name associated with the current effective user ID.
+uname        -Print certain system information
+users        -Output who is currently logged in according to FILE.
+free         -show detailed about memory usage and rest other free space.
+ps           -
+cd	     -Change the current directory to DIR.  The default DIR is the value of the HOME shell variable.
+pwd          -Print the name of the current working directory.
+mkdir        -Create the DIRECTORY(ies), if they do not already exist.
+ls           -List information about the FILEs (the current directory by default).
+cat	     -Concatenate FILE(s) to standard output.
+touch        -Update the access and modification times of each FILE to the current time.
+echo	     -echo is a command used to print content what we entered along with echo(echo "GOOD MORNING")
+nano	     -To place the cursor on a specific line of a file, put the line number with a '+' before the filename.  The column number can be added after a comma. When a filename is '-', nano reads data from standard input.
+grep	     -Search for PATTERNS in each FILE.
+cp	     -Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+mv	     -Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+rm	     -Remove (unlink) the FILE(s).
+less	     -
+more	     -A file perusal filter for CRT viewing.
+sort	     -Write sorted concatenation of all FILE(s) to standard output.
+chown	     -Change the owner and/or group of each FILE to OWNER and/or GROUP.
+chmod	     -Change the mode of each FILE to MODE.
+vi	     -
+history	     -Display the history list with line numbers, prefixing each modified entry with a `*'.  An argument of N lists only the last N entries.
+-v	     -
+man + help   -Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options.
+

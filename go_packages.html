@@ -1,0 +1,114 @@
+<h2>Packages</h2>
+
+<p>Every Go program is made up of packages.</p>
+
+<p>Programs start running in package main.</p>
+
+<p>This program is using the packages with import paths "fmt" and "math/rand".</p>
+
+<p>By convention, the package name is the same as the last element of the import path. For instance, the "math/rand" package comprises files that begin with the statement package rand.</p>
+
+<h3>net/http</h3>
+
+<p>	Package http provides HTTP client and server implementations.
+
+	The standard library in go comes with the net/http package, which is an excellent starting point for 
+	building RestAPIs. And most other libraries the adds some additional feature are also interoperable 
+    with the net/http package so understanding the net/http package is crucial to using golang for RestAPIs.</p>
+    
+<h3>Bufio</h3>
+<p>Package bufio implements buffered I/O. It wraps an io.Reader or io.Writer object, creating another object (Reader or Writer) that also implements the interface but provides buffering and some help for textual I/O. </p>
+
+<h3>Bytes</h3>
+<p>Package bytes implements functions for the manipulation of byte slices. It is analogous to the facilities of the strings package</p>
+
+<h3>container</h3>
+<p>
+	<ul>
+		<li><b>heap</b><p>Package heap provides heap operations for any type that implements heap.Interface. A heap is a tree with the property that each node is the minimum-valued node in its subtree.</p></li>
+		<li><b>List</b><p>Package list implements a doubly linked list. </p></li>
+		<li><b>Ring</b><p>Package ring implements operations on circular lists. </p></li>
+	</ul>
+</p>
+
+<h3>crypto</h3>
+<p>Package crypto collects common cryptographic constants. </p>
+
+<h3>rand</h3>
+<p> 	Package rand implements a cryptographically secure random number generator. </p>
+
+<h3>database</h3>
+<p>
+	<ul>
+		<li><b>sql</b><p>Package sql provides a generic interface around SQL (or SQL-like) databases. </p>
+		<ul><li><b>driver</b><p>Package driver defines interfaces to be implemented by database drivers as used by package sql. </p></li></ul>
+		</li>
+
+	</ul>
+</p>
+
+<h3>embed</h3> 
+<p>Package embed provides access to files embedded in the running Go program. </p>
+
+<h3>encoding</h3>
+<p>Package encoding defines interfaces shared by other packages that convert data to and from byte-level and textual representations.</p>
+	
+<h3>json</h3>
+<p>Package json implements encoding and decoding of JSON as defined in RFC 7159. </p>
+
+<h3>fmt</h3>
+<p> 	Package fmt implements formatted I/O with functions analogous to C's printf and scanf. </p>
+<div>
+<h3>html</h3>
+<p> Package html provides functions for escaping and unescaping HTML text. </p>
+<h3>template</h3>
+<p> Package template (html/template) implements data-driven templates for generating HTML output safe against code injection. </p>
+</div>
+
+<h3>math</h3>
+<p> 	Package math provides basic constants and mathematical functions. </p>
+
+<div>
+	<h3>os</h3>
+	<p> 	Package os provides a platform-independent interface to operating system functionality.</p>
+	<h3>exec</h3>
+	<p> 	Package exec runs external commands. </p>
+	<h3>signal</h3>
+	<p> 	Package signal implements access to incoming signals. </p>
+	<h3>user</h3>
+	<p>Package user allows user account lookups by name or id. </p>
+</div>
+
+
+<h3>log</h3>
+<p>Package log implements a simple logging package.</p>
+
+<h3>filepath</h3>
+<p>Package filepath implements utility routines for manipulating filename paths in a way compatible with the target operating system-defined file paths.</p>
+
+<h3>time</h3>
+<p> 	Package time provides functionality for measuring and displaying time. </p>
+
+<h3>sort</h3>
+<p>Package sort provides primitives for sorting slices and user-defined collections. </p>
+
+<h3>runtime</h3>
+<p>Package runtime contains operations that interact with Go's runtime system, such as functions to control goroutines. </p>
+
+<h3>image</h3>
+<p>Package image implements a basic 2-D image library. </p>
+
+<h3>color</h3>
+<p>Package color implements a basic color library. </p>
+
+<h3>draw</h3>
+<p>Package draw provides image composition functions. </p>
+
+<h3>gif</h3>
+<p> 	Package gif implements a GIF image decoder and encoder. </p>
+
+<h3>jpeg</h3>
+<p>Package jpeg implements a JPEG image decoder and encoder.</p>
+
+<h3>png</h3>
+<p>Package png implements a PNG image decoder and encoder. </p>
